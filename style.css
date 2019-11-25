@@ -1,0 +1,11 @@
+.container {
+    max-width: 350px;
+    text-align: center;
+    font-family: monospace;
+}
+
+.title{
+    color: red;
+}
+
+

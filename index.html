@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Pomodoro</title>
+</head>
+
+<body>
+
+    <div class="container rounded">
+        <h1 class="title col-12">POMODORO CLOCK</h1>
+        <img src="img/pomodoro.png" alt="pomodoro">
+
+        <div class="timer row">
+            <h1 class="col-12 mt-3 mb-5">00:00</h1>
+        </div>
+
+        <div class="main row rounded">
+            <div class="work col-4">
+                <button class="work_more btn btn-success m-1">+</button>
+                <p class="work_time m-1">25 <span> min</span></p>
+                <button class="work_less btn btn-danger m-1">-</button>
+            </div>
+
+            <div class="buttons col-4">
+                <button class="start btn btn-primary my-1">start</button>
+                <button class="reset btn btn-outline-secondary my-1">reset</button>
+                <button class="stop btn btn-warning my-1">stop</button>
+            </div>
+
+            <div class="break col-4">
+                <button class="break_more btn btn-success m-1">+</button>
+                <p class="break_time m-1">5 <span> min</span></p>
+                <button class="break_less btn btn-danger m-1">-</button>
+            </div>
+        </div>
+
+        <footer class="mt-5">copyright &copy; Roberto Castelli www.robertocastelli.dev</footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
