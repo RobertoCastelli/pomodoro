@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- FONTAWSOME -->
+    <script src="https://kit.fontawesome.com/dcf7aaaa52.js" crossorigin="anonymous"></script>
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,38 +19,43 @@
 </head>
 
 <body>
-
     <div class="container rounded">
         <h1 class="title col-12">POMODORO CLOCK</h1>
-        <img src="img/pomodoro.png" alt="pomodoro">
+        <img src="img/pomodoro.png">
+        <h6 id="status"></h6>
 
-        <div class="timer row">
-            <h1 class="col-12 mt-3 mb-5">00:00</h1>
+        <hr>
+
+        <div class="panel row">
+            <h1 id="clock" class="panel_clock col-12"></h1>
         </div>
 
-        <div class="main row rounded">
+        <div class="panel_controls col-12">
+            <button id="start"><i class="far fa-play-circle fa-2x"></i></button>
+            <button id="pause"><i class="far fa-pause-circle fa-2x"></i></button>
+            <button id="reset"><i class="fas fa-history fa-2x"></i></button>
+        </div>
+
+        <div class="options row">
             <div class="work col-4">
-                <button class="work_more btn btn-success m-1">+</button>
-                <p class="work_time m-1">25 <span> min</span></p>
-                <button class="work_less btn btn-danger m-1">-</button>
+                <button id="workMore" class="work_more btn btn-success mb-3">+</button>
+                <p id="workTime" class="work_time m-1"></p>
+                <button id="workLess" class="work_less btn btn-danger m-3">-</button>
             </div>
 
-            <div class="buttons col-4">
-                <button class="start btn btn-primary my-1">start</button>
-                <button class="reset btn btn-outline-secondary my-1">reset</button>
-                <button class="stop btn btn-warning my-1">stop</button>
-            </div>
+            <div class="counter col-4">1</div>
 
             <div class="break col-4">
-                <button class="break_more btn btn-success m-1">+</button>
-                <p class="break_time m-1">5 <span> min</span></p>
-                <button class="break_less btn btn-danger m-1">-</button>
+                <button id="breakMore" class="break_more btn btn-success mb-3">+</button>
+                <p id="breakTime" class="break_time m-1"></p>
+                <button id="breakLess" class="break_less btn btn-danger m-3">-</button>
             </div>
         </div>
 
-        <footer class="mt-5">copyright &copy; Roberto Castelli www.robertocastelli.dev</footer>
+        <footer class="my-4">copyright &copy; Roberto Castelli www.robertocastelli.dev</footer>
     </div>
 
+    <script src="functions.js"></script>
     <script src="app.js"></script>
 </body>
 

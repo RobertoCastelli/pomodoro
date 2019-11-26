@@ -8,4 +8,12 @@
     color: red;
 }
 
+button {
+    border: none;
+    outline: none !important;
+    background: white;
+}
+
+
+
 
