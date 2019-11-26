@@ -3,47 +3,59 @@ let workTime = document.getElementById('workTime');
 let clock = document.getElementById('clock');
 let status = document.getElementById('status');
 let buttons = document.querySelectorAll('button');
+let counter = document.getElementById('counter');
 
-let workTimeValue;
-let breakTimeValue;
+let clockTimeValue;
+let interval;
+let minutes;
+let seconds;
+let timer;
 
-reset();
+let workTimeValue = 25;
+let breakTimeValue = 5;
+let counterValue = 0;
+let session = 'breakTime';  
+let statusMessage = 'Time is the most valuable thing a man can spend.';
+
+updateValues();
+updateClock(workTimeValue, 0);
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        console.log(button.id)
         switch (button.id) {
             case 'workMore':
                 workTimeValue += 1;
-                updateTime();
-                checkTime();
+                updateValues();
+                updateClock(workTimeValue, 0);
                 break;
             case 'workLess':
                 workTimeValue -= 1;
-                updateTime();
-                checkTime();
+                checkTimeValues();
+                updateValues();
+                updateClock(workTimeValue, 0);
                 break;
             case 'breakMore':
                 breakTimeValue += 1;
-                updateTime();
-                checkTime();
+                updateValues();
                 break;
             case 'breakLess':
                 breakTimeValue -= 1;
-                updateTime();
-                checkTime();
+                checkTimeValues();
+                updateValues();
                 break;
             case 'reset':
                 reset();
+                updateValues();
+                updateClock(workTimeValue, 0);
                 break;
             case 'start':
-                start(workTimeValue * 60);
+                start(clockTimeValue * 60);
                 break;
             case 'pause':
                 pause();
                 break;
             default:
-                updateTime();
+                updateValues();
         }
     })
 });

@@ -22,15 +22,13 @@
     <div class="container rounded">
         <h1 class="title col-12">POMODORO CLOCK</h1>
         <img src="img/pomodoro.png">
-        <h6 id="status"></h6>
-
-        <hr>
+        <h6 id="status" class="mb-5"></h6>
 
         <div class="panel row">
             <h1 id="clock" class="panel_clock col-12"></h1>
         </div>
 
-        <div class="panel_controls col-12">
+        <div class="panel_controls col-12 mb-3">
             <button id="start"><i class="far fa-play-circle fa-2x"></i></button>
             <button id="pause"><i class="far fa-pause-circle fa-2x"></i></button>
             <button id="reset"><i class="fas fa-history fa-2x"></i></button>
@@ -38,21 +36,21 @@
 
         <div class="options row">
             <div class="work col-4">
-                <button id="workMore" class="work_more btn btn-success mb-3">+</button>
-                <p id="workTime" class="work_time m-1"></p>
-                <button id="workLess" class="work_less btn btn-danger m-3">-</button>
+                <button id="workMore" class="btn btn-success mb-3">+</button>
+                <p id="workTime"></p>
+                <button id="workLess" class="btn btn-danger">-</button>
             </div>
 
-            <div class="counter col-4">1</div>
+            <div id="counter" class="col-4 my-auto display-3"></div>
 
-            <div class="break col-4">
-                <button id="breakMore" class="break_more btn btn-success mb-3">+</button>
-                <p id="breakTime" class="break_time m-1"></p>
-                <button id="breakLess" class="break_less btn btn-danger m-3">-</button>
+            <div class="break col-4 mb-3">
+                <button id="breakMore" class="btn btn-success mb-3">+</button>
+                <p id="breakTime"></p>
+                <button id="breakLess" class="btn btn-danger">-</button>
             </div>
         </div>
 
-        <footer class="my-4">copyright &copy; Roberto Castelli www.robertocastelli.dev</footer>
+        <footer class="my-3">copyright &copy; Roberto Castelli www.robertocastelli.dev</footer>
     </div>
 
     <script src="functions.js"></script>
