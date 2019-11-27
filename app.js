@@ -63,6 +63,7 @@ buttons.forEach(button => {
                 break;
             case 'pause':
                 document.getElementById('start').removeAttribute('disabled', true);
+                document.getElementById('pause').setAttribute('disabled', true);
                 pause();
                 break;
             default:
