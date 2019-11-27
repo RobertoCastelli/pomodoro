@@ -26,7 +26,7 @@ function updateClock(min, sec) {
 
 // START CLOCK
 function start(duration) {
-    statusMessage = 'WORK \nin progress';
+    statusMessage = 'Good WORK \nkeep it up!';
     timer = duration;
     interval = setInterval(() => {
         minutes = parseInt(timer / 60, 10);
@@ -72,7 +72,7 @@ function changeTimer() {
         updateValues();
         start(breakTimeValue * 60);
         session = 'breakTime';
-        statusMessage = 'WORK \nin progress';
+        statusMessage = 'Good WORK \nkeep it up!';
     }
 }
 

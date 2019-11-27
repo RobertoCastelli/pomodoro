@@ -50,14 +50,17 @@ buttons.forEach(button => {
                 updateValues();
                 break;
             case 'reset':
+                document.getElementById('start').removeAttribute('disabled', true);
                 reset();
                 updateValues();
                 updateClock(workTimeValue, 0);
                 break;
             case 'start':
+                document.getElementById('start').setAttribute('disabled', true);
                 start(clockTimeValue * 60);
                 break;
             case 'pause':
+                document.getElementById('start').removeAttribute('disabled', true);
                 pause();
                 break;
             default:
