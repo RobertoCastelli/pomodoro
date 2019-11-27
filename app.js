@@ -20,6 +20,7 @@ let breakTimeValue = 5;
 let counterValue = 0;
 let session = 'breakTime';
 let statusMessage = 'Time is the most valuable thing a man can spend.';
+document.getElementById('pause').setAttribute('disabled', true);
 
 // RENDER INIT STATE
 updateValues();
@@ -57,6 +58,7 @@ buttons.forEach(button => {
                 break;
             case 'start':
                 document.getElementById('start').setAttribute('disabled', true);
+                document.getElementById('pause').removeAttribute('disabled', true);
                 start(clockTimeValue * 60);
                 break;
             case 'pause':
