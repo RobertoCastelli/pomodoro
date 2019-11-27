@@ -1,27 +1,33 @@
+// GETS
 let breakTime = document.getElementById('breakTime');
 let workTime = document.getElementById('workTime');
 let clock = document.getElementById('clock');
 let status = document.getElementById('status');
 let buttons = document.querySelectorAll('button');
 let counter = document.getElementById('counter');
+let sndBell = document.getElementById('bell');
 
+// GLOBAL VARIABLES
 let clockTimeValue;
 let interval;
 let minutes;
 let seconds;
 let timer;
 
-let workTimeValue = 25;
-let breakTimeValue = 5;
+// INIT STATE
+let workTimeValue = 0.1;
+let breakTimeValue = 0.1;
 let counterValue = 0;
-let session = 'breakTime';  
+let session = 'breakTime';
 let statusMessage = 'Time is the most valuable thing a man can spend.';
 
+// RENDER INIT STATE
 updateValues();
 updateClock(workTimeValue, 0);
 
+// ACTIONS
 buttons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
         switch (button.id) {
             case 'workMore':
                 workTimeValue += 1;
