@@ -15,8 +15,8 @@ let seconds;
 let timer;
 
 // INIT STATE
-let workTimeValue = 0.1;
-let breakTimeValue = 0.1;
+let workTimeValue = 25;
+let breakTimeValue = 5;
 let counterValue = 0;
 let session = 'breakTime';
 let statusMessage = 'Time is the most valuable thing a man can spend.';
