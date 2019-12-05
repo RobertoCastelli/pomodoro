@@ -64,14 +64,13 @@ function changeTimer() {
         updateValues();
         start(breakTimeValue * 60);
         counterValue++;
-        workTimeValue = 25;
         session = 'workTime';
         statusMessage = 'Take a BREAK \nand Relax';
     } else if (timer < 0 && session == 'workTime') {
         clearInterval(interval);
         playAudio(sndBell);
         updateValues();
-        start(breakTimeValue * 60);
+        start(workTimeValue * 60);
         session = 'breakTime';
         statusMessage = 'Good WORK \nkeep it up!';
     }
