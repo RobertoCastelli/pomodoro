@@ -64,6 +64,7 @@ function changeTimer() {
         updateValues();
         start(breakTimeValue * 60);
         counterValue++;
+        workTimeValue = 25;
         session = 'workTime';
         statusMessage = 'Take a BREAK \nand Relax';
     } else if (timer < 0 && session == 'workTime') {
